@@ -11,7 +11,6 @@ License:	GPL
 Group:		Development/Perl
 Source:		%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/RPM4/
-Buildroot:	%{_tmppath}/%{name}-root
 BuildArch: noarch
 BuildRequires: perl(LWP::UserAgent)
 

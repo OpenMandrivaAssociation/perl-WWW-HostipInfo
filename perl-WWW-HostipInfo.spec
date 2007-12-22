@@ -1,19 +1,19 @@
 %define module	WWW-HostipInfo
 %define name	perl-%{module}
 %define version	0.08
-%define release %mkrel 4
+%define release %mkrel 5
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Summary:	get a country and city information from ip address
+Summary:	Get a country and city information from ip address
 License:	GPL
 Group:		Development/Perl
-Source:		%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/RPM4/
-Buildroot:	%{_tmppath}/%{name}-root
-BuildArch: noarch
+URL:		http://search.cpan.org/dist/%{module}
+Source:		http://search.cpan.org/CPAN/modules/by-module/WWW/%{module}-%{version}.tar.bz2
 BuildRequires: perl(LWP::UserAgent)
+BuildArch:  noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 
 %description
@@ -32,16 +32,14 @@ Get a country and city information from ip address via www.hostip.info API.
 # %%make test
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %files
 %defattr(-,root,root)
 %doc README Changes
-%{perl_vendorlib}/*
+%{perl_vendorlib}/WWW
 %{_mandir}/*/*
-
-

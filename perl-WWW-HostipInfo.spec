@@ -1,26 +1,26 @@
-%define module	WWW-HostipInfo
-%define name	perl-%{module}
-%define version	0.08
-%define release %mkrel 8
+%define upstream_name	 WWW-HostipInfo
+%define upstream_version 0.08
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Get a country and city information from ip address
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://search.cpan.org/CPAN/modules/by-module/WWW/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires: perl(LWP::UserAgent)
 BuildArch:  noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 
 %description
 Get a country and city information from ip address via www.hostip.info API.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor

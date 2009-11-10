@@ -1,5 +1,5 @@
 %define upstream_name	 WWW-HostipInfo
-%define upstream_version 0.08
+%define upstream_version 0.1
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Get a country and city information from ip address
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(LWP::UserAgent)
 BuildArch:  noarch

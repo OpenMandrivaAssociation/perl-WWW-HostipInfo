@@ -1,15 +1,15 @@
 %define upstream_name	 WWW-HostipInfo
-%define upstream_version 0.12
+%define upstream_version 0.14
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Get a country and city information from ip address
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/WWW-HostipInfo-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(LWP::UserAgent)
@@ -80,4 +80,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 - fix buildrequires
 - first mdv package
 - Create perl-WWW-HostipInfo
+
 

@@ -8,7 +8,7 @@ Release:	3
 Summary:	Get a country and city information from ip address
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/WWW-HostipInfo-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel

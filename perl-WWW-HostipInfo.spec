@@ -2,14 +2,14 @@
 %define upstream_version 0.14
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Get a country and city information from ip address
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/WWW-HostipInfo-%{upstream_version}.tar.gz
+Url:		https://github.com/makamaka/WWW-HostipInfo
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MAKAMAKA/WWW-HostipInfo-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel

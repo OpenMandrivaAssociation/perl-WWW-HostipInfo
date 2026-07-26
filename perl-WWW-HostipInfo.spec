@@ -1,15 +1,13 @@
 %define upstream_name	 WWW-HostipInfo
-%define upstream_version 0.14
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	0.14
+Release:	5
 
 Summary:	Get a country and city information from ip address
 License:	GPL
 Group:		Development/Perl
 Url:		https://github.com/makamaka/WWW-HostipInfo
-Source0:	https://cpan.metacpan.org/authors/id/M/MA/MAKAMAKA/WWW-HostipInfo-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MAKAMAKA/WWW-HostipInfo-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ BuildArch:	noarch
 Get a country and city information from ip address via www.hostip.info API.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -50,9 +48,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 0.80.0-1mdv2010.0
 + Revision: 408098
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.08-8mdv2009.0
+- rebuild using %0.14 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.08-8mdv2009.0
 + Revision: 258788
 - rebuild
 

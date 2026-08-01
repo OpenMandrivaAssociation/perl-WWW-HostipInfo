@@ -2,7 +2,7 @@
 %define upstream_version 0.14
 Name:		perl-%{upstream_name}
 Version:	0.14
-Release:	3
+Release:	4
 
 Summary:	Get a country and city information from ip address
 License:	GPL
